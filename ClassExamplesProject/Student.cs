@@ -13,5 +13,12 @@ namespace ClassExamplesProject
         public int SAT { get; set; }
         public double GPA { get; set; }
         public int? MajorId { get; set; } //(?) means it can be null
+        public Major Major { get; set; }
+
+        public string Fullname ()//this is a method returning a value
+        {
+            var fullname = $"{this.Lastname}, {this.Firstname}";
+            return fullname;
+        }
     }
 }
