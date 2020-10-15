@@ -13,12 +13,14 @@ namespace ClassExamplesProject
         public int Section { get; set; }
         public int? InstructorId { get; set; }
 
+        //method that doesn't return a value/ shortcut for ConsoleWriteline
         public void print()
         {
             Console.WriteLine($"Class: Id:{this.Id}, Subject: {this.Subject}, " +
                 $"Section: {this.Section}, InstructorId: {this.InstructorId}");
         }
 
+        //constructor that takes 3 parameters 
         public Class(string subject, int section, int? instructorId)
         {
             this.Id = NextId++;//this makes each one unique
@@ -26,10 +28,12 @@ namespace ClassExamplesProject
             this.Section = section;
             this.InstructorId = instructorId;
         }
+
+
+        //default constructor: a contructor that takes no parameters
+        //good practice to always have a default constructor
         public Class()
         {
-            //good practice to always have a default constructor
-            //default constructor: a contructor that takes no parameters
         }
     }
 }

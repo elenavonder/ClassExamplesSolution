@@ -8,7 +8,8 @@ namespace ClassExamplesProject
     {
         public int Id { get; set; }
         public string Description { get; set; }
-        public int MinSAT { get; private set; }
+        //MinSAT set to private so the user can't set own number
+        public int MinSAT { get; private set; } 
 
         //method to set MinSAT so there isn't a invalid input
         public void SetMinSAT(int minsat)
@@ -22,6 +23,7 @@ namespace ClassExamplesProject
             this.MinSAT = minsat;
         }
 
+        //constructor requring 3 parameters
         public Major(int id, string desc, int MinSAT)
         {
             this.Id = id;
@@ -30,7 +32,8 @@ namespace ClassExamplesProject
             this.SetMinSAT(MinSAT);//only valid input
         }
 
-        public Major()//constructor
+        //default constructor
+        public Major()
         {
         }
     }

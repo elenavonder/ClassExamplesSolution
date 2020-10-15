@@ -12,10 +12,12 @@ namespace ClassExamplesProject
         public string Lastname { get; set; }
         public int SAT { get; set; }
         public double GPA { get; set; }
-        public int? MajorId { get; set; } //(?) means it can be null
+        //(?) means those that CAN'T be null CAN be null
+        public int? MajorId { get; set; }
         public Major Major { get; set; }
 
-        public string Fullname ()//this is a method returning a value
+        //this is a method returning a value
+        public string Fullname ()
         {
             var fullname = $"{this.Lastname}, {this.Firstname}";
             return fullname;
